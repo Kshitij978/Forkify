@@ -7,12 +7,13 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open", 
+    "start": "webpack-dev-server --mode development --open",
     "deploy": "gh -d dist"
   },
   "author": "Kshitij Srivastava",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.3.0",
     "npm": "^6.14.5",
     "webpack": "^4.43.0",
