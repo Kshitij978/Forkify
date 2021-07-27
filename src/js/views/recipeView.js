@@ -1,6 +1,21 @@
 import { elements } from './base';
 import { Fraction } from 'fractional';
 
+export const placeholder = () => {
+    elements.recipe.innerHTML = `
+    <div style = "height: 100%; background: linear-gradient(
+        rgba(251, 219, 137, 0.8), 
+        rgba(245, 154, 131, 0.8)
+      ), url(../img/Recipe.jpg); background-repeat: no-repeat; background-size: cover; ">
+      <div style=" display: flex; justify-content: center;">
+        <h1 style="padding-top: 20rem; font-size: 4rem; color: white; text-align: center;">
+            Start by searching<br/> your favourite food :)
+        </h1>
+      </div>
+    </div>
+`;
+}
+
 export const clearRecipe = () => {
     elements.recipe.innerHTML = '';
 };
