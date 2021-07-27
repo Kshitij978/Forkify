@@ -23,7 +23,6 @@ const state = {};
 const controlSearch = async () => {
     // 1. Get query from the view
     const query = searchView.getInput(); //TODO
-    console.log(query);
 
     if (query) {
         // 2. New search object and add it to state
@@ -42,9 +41,13 @@ const controlSearch = async () => {
             clearLoader();
             searchView.renderResults(state.search.result);
 
+            //6. Set recipe ID to first result on search.
+            window.location.hash = state.search.result[0].recipe_id;
+
         } catch (error) {
-            alert ('Something went wrong with the search...');
             clearLoader();
+            controlRecipe();
+            searchView.onSearchError();
         }
     }
 }

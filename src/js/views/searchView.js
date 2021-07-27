@@ -91,3 +91,13 @@ export const renderResults = (recipes, page = 1, resPerPage = 10) => {
     // render pagination buttons
     renderButtons(page, recipes.length, resPerPage);
 };
+
+export const onSearchError = () => {
+    elements.searchResultList.innerHTML = `
+    <div style=" display: flex; justify-content: center;">
+    <h1 style="padding-top: 4rem; padding-right: 2rem; padding-left: 2rem;  font-size: 2rem; text-align: center;">
+        Oh, Snap! <br/>No recipe was found. :( <br/>Try again with different keyword.
+    </h1>
+  </div>
+    `;
+}
